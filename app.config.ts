@@ -9,6 +9,7 @@ const buildNumber = 1;
 const antsomiAppGroupId = `group.${appId}.antsomi`;
 const environment: "development" | "production" = "development";
 const plugins: ExpoConfig["plugins"] = [];
+const deploymentTarget = "16.0";
 
 export default (config: ExpoConfig): ExpoConfig => ({
   ...config,
@@ -51,6 +52,7 @@ export default (config: ExpoConfig): ExpoConfig => ({
   },
   plugins: [
     "expo-router",
+    "expo-notifications",
     [
       "expo-splash-screen",
       {
@@ -64,7 +66,7 @@ export default (config: ExpoConfig): ExpoConfig => ({
       "expo-build-properties",
       {
         ios: {
-          deploymentTarget: "16.0",
+          deploymentTarget,
           useFrameworks: "static",
         },
         android: {
@@ -72,6 +74,16 @@ export default (config: ExpoConfig): ExpoConfig => ({
         },
       },
     ],
+    [
+      "./plugins/expo-notification-service",
+      {
+        ios: {
+          deploymentTarget,
+          appGroup: antsomiAppGroupId,
+        },
+      },
+    ],
+
     ...plugins,
   ],
   experiments: {
