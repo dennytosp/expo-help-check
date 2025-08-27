@@ -1,16 +1,9 @@
-import AntsomiRnSDK from "@antsomicorp/antsomirnsdk";
 import { useNavigation } from "@react-navigation/native";
-import React, { useEffect } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 
 const Home = () => {
   const navigation = useNavigation();
-
-  useEffect(() => {
-    AntsomiRnSDK.getPushUid().then((item) => {
-      console.log("Push UID", item);
-    });
-  }, []);
 
   const onPress = () => {
     // @ts-ignore
@@ -19,9 +12,9 @@ const Home = () => {
 
   return (
     <View style={styles.container}>
-      <Text onPress={onPress} style={styles.text}>
-        Home
-      </Text>
+      <TouchableOpacity onPress={onPress}>
+        <Text style={styles.text}>Home</Text>
+      </TouchableOpacity>
     </View>
   );
 };
