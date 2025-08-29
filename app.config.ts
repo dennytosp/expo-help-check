@@ -22,7 +22,7 @@ export default (config: ExpoConfig): ExpoConfig => ({
   platforms: ["ios", "android"],
   version: appVersion,
   orientation: "portrait",
-  icon: "./assets/images/icon.png",
+  icon: "./assets/images/logo.png",
   scheme: appScheme,
   userInterfaceStyle: "automatic",
   newArchEnabled: true,
@@ -38,13 +38,13 @@ export default (config: ExpoConfig): ExpoConfig => ({
     },
     infoPlist: {
       UIBackgroundModes: ["fetch", "remote-notification"],
+      // FirebaseAppDelegateProxyEnabled: false,
     },
     googleServicesFile: googleServicesFile.ios,
   },
   android: {
     adaptiveIcon: {
-      foregroundImage: "./assets/images/adaptive-icon.png",
-      backgroundColor: "#ffffff",
+      backgroundImage: "./assets/images/logo.png",
     },
     edgeToEdgeEnabled: true,
     package: appId,
