@@ -5,10 +5,13 @@ const appName = "Pone";
 const appId = "com.mad.dinh.pone";
 const appScheme = "pone";
 const appSlug = "pone";
-const plugins: ExpoConfig["plugins"] = [];
 const buildNumber = 1;
+const antsomiAppGroupId = `group.${appId}.antsomi`;
+const environment: "development" | "production" = "development";
+const plugins: ExpoConfig["plugins"] = [];
 
-export default (): ExpoConfig => ({
+export default (config: ExpoConfig): ExpoConfig => ({
+  ...config,
   name: appName,
   slug: appSlug,
   platforms: ["ios", "android"],
@@ -23,6 +26,14 @@ export default (): ExpoConfig => ({
     supportsTablet: true,
     bundleIdentifier: appId,
     buildNumber: buildNumber.toString(),
+    entitlements: {
+      "com.apple.developer.networking.wifi-info": true,
+      "aps-environment": environment,
+      "com.apple.security.application-groups": [antsomiAppGroupId],
+    },
+    infoPlist: {
+      UIBackgroundModes: ["fetch", "remote-notification"],
+    },
   },
   android: {
     adaptiveIcon: {
