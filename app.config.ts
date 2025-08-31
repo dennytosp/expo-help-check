@@ -10,6 +10,10 @@ const antsomiAppGroupId = `group.${appId}.antsomi`;
 const environment: "development" | "production" = "development";
 const plugins: ExpoConfig["plugins"] = [];
 const deploymentTarget = "16.0";
+const googleServicesFile = {
+  ios: "firebase/GoogleService-Info.plist",
+  android: "firebase/google-services.json",
+};
 
 export default (config: ExpoConfig): ExpoConfig => ({
   ...config,
@@ -35,6 +39,7 @@ export default (config: ExpoConfig): ExpoConfig => ({
     infoPlist: {
       UIBackgroundModes: ["fetch", "remote-notification"],
     },
+    googleServicesFile: googleServicesFile.ios,
   },
   android: {
     adaptiveIcon: {
@@ -44,6 +49,7 @@ export default (config: ExpoConfig): ExpoConfig => ({
     edgeToEdgeEnabled: true,
     package: appId,
     versionCode: 1,
+    googleServicesFile: googleServicesFile.android,
   },
   web: {
     bundler: "metro",
@@ -52,7 +58,8 @@ export default (config: ExpoConfig): ExpoConfig => ({
   },
   plugins: [
     "expo-router",
-    "expo-notifications",
+    "@react-native-firebase/app",
+    "@react-native-firebase/crashlytics",
     [
       "expo-splash-screen",
       {
