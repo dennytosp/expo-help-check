@@ -4,7 +4,7 @@
     "": {
       "name": "expo-help-check",
       "dependencies": {
-        "@antsomicorp/antsomirnsdk": "^0.15.0",
+        "@antsomicorp/antsomirnsdk": "^0.16.0",
         "@expo/vector-icons": "^14.1.0",
         "@react-native-firebase/analytics": "^23.2.0",
         "@react-native-firebase/app": "^23.2.0",
@@ -53,7 +53,7 @@
 
     "@ampproject/remapping": ["@ampproject/remapping@2.3.0", "", { "dependencies": { "@jridgewell/gen-mapping": "^0.3.5", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw=="],
 
-    "@antsomicorp/antsomirnsdk": ["@antsomicorp/antsomirnsdk@0.15.0", "", { "peerDependencies": { "react": "*", "react-native": "*" } }, "sha512-hn34rdybdrM0H7KM2BQvtQnFJtRPugsvj7tyWJkW+Lu0AGCZ/oJHphlhzaUXXSgkSGp+IW8uwuPRGoA172QynQ=="],
+    "@antsomicorp/antsomirnsdk": ["@antsomicorp/antsomirnsdk@0.16.0", "", { "peerDependencies": { "react": "*", "react-native": "*" } }, "sha512-9sCekmWQjpJXhoDHABjBUXj1QuSCt9CJNBhEsyroH67XHq1xpltOnmvbgG62hyn3+gTVog5dbX0qTJ5aAR0rfQ=="],
 
     "@babel/code-frame": ["@babel/code-frame@7.27.1", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.27.1", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg=="],
 

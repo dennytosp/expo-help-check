@@ -15,7 +15,7 @@
     "prebuild": "npx expo prebuild"
   },
   "dependencies": {
-    "@antsomicorp/antsomirnsdk": "^0.15.0",
+    "@antsomicorp/antsomirnsdk": "^0.16.0",
     "@expo/vector-icons": "^14.1.0",
     "@react-native-firebase/analytics": "^23.2.0",
     "@react-native-firebase/app": "^23.2.0",
