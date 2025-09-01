@@ -4,7 +4,7 @@
     "": {
       "name": "expo-help-check",
       "dependencies": {
-        "@antsomicorp/antsomirnsdk": "^0.16.0",
+        "@antsomicorp/antsomirnsdk": "^0.27.0",
         "@expo/vector-icons": "^14.1.0",
         "@react-native-firebase/analytics": "^23.2.0",
         "@react-native-firebase/app": "^23.2.0",
@@ -41,6 +41,7 @@
       "devDependencies": {
         "@babel/core": "^7.25.2",
         "@types/react": "~19.0.10",
+        "eas-local-cache": "^1.0.2",
         "eslint": "^9.25.0",
         "eslint-config-expo": "~9.2.0",
         "tsx": "^4.20.5",
@@ -53,7 +54,7 @@
 
     "@ampproject/remapping": ["@ampproject/remapping@2.3.0", "", { "dependencies": { "@jridgewell/gen-mapping": "^0.3.5", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw=="],
 
-    "@antsomicorp/antsomirnsdk": ["@antsomicorp/antsomirnsdk@0.16.0", "", { "peerDependencies": { "react": "*", "react-native": "*" } }, "sha512-9sCekmWQjpJXhoDHABjBUXj1QuSCt9CJNBhEsyroH67XHq1xpltOnmvbgG62hyn3+gTVog5dbX0qTJ5aAR0rfQ=="],
+    "@antsomicorp/antsomirnsdk": ["@antsomicorp/antsomirnsdk@0.27.0", "", { "peerDependencies": { "react": "*", "react-native": "*" } }, "sha512-NTfDez9o97yw5SE1XSwBOGONaxZhQS69mkhUVE2kBoP4y00Ddal6pU1lZvoMO7eb87nFIA2eFFyiw6VwvB7UXA=="],
 
     "@babel/code-frame": ["@babel/code-frame@7.27.1", "", { "dependencies": { "@babel/helper-validator-identifier": "^7.27.1", "js-tokens": "^4.0.0", "picocolors": "^1.1.1" } }, "sha512-cjQ7ZlQ0Mv3b47hABuTevyTuYN4i+loJKGeV9flcCgIK37cCXRh+L1bd3iBHlynerhQ7BhCkn2BPbQUL+rGqFg=="],
 
@@ -892,6 +893,8 @@
     "dotenv-expand": ["dotenv-expand@11.0.7", "", { "dependencies": { "dotenv": "^16.4.5" } }, "sha512-zIHwmZPRshsCdpMDyVsqGmgyP0yT8GAgXUnkdAoJisxvf33k7yO6OuoKmcTGuXPWSsm8Oh88nZicRLA9Y0rUeA=="],
 
     "dunder-proto": ["dunder-proto@1.0.1", "", { "dependencies": { "call-bind-apply-helpers": "^1.0.1", "es-errors": "^1.3.0", "gopd": "^1.2.0" } }, "sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A=="],
+
+    "eas-local-cache": ["eas-local-cache@1.0.2", "", {}, "sha512-LSXfa4OQICrAl/gt+IdxUACWnPmddSAiXa6ZxKqFBSb/pmVaiBNawkCVbbaRc3+lAjMlOnVXJET1S0c5T211Yg=="],
 
     "eastasianwidth": ["eastasianwidth@0.2.0", "", {}, "sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA=="],
 

@@ -8,7 +8,7 @@ import {
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 import { StatusBar } from "expo-status-bar";
-import { Platform } from "react-native";
+import { Linking, Platform } from "react-native";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import "react-native-reanimated";
 import { SafeAreaProvider } from "react-native-safe-area-context";
@@ -36,6 +36,19 @@ const getAntsomiConfig = () => {
   const appGroupId = `group.${appId}.antsomi`;
   AntsomiRnSDK.config(portalId, propsId, appId, appGroupId);
   AntsomiRnSDK.requestNotificationPermission();
+
+  AntsomiRnSDK.onPendingLink((link: string) => {
+    console.log("Link from Antsomi", link);
+    setTimeout(() => {
+      Linking.openURL(link).catch((err) => {
+        console.error("Failed to open URL: ", err);
+      });
+    }, 500);
+  });
+
+  AntsomiRnSDK.onOpenedNotification((notification) => {
+    console.log("Notification from Antsomi", notification);
+  });
 };
 
 export default function RootLayout() {
