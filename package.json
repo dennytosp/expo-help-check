@@ -15,7 +15,7 @@
     "prebuild": "npx expo prebuild"
   },
   "dependencies": {
-    "@antsomicorp/antsomirnsdk": "^0.16.0",
+    "@antsomicorp/antsomirnsdk": "^0.27.0",
     "@expo/vector-icons": "^14.1.0",
     "@react-native-firebase/analytics": "^23.2.0",
     "@react-native-firebase/app": "^23.2.0",
@@ -52,6 +52,7 @@
   "devDependencies": {
     "@babel/core": "^7.25.2",
     "@types/react": "~19.0.10",
+    "eas-local-cache": "^1.0.2",
     "eslint": "^9.25.0",
     "eslint-config-expo": "~9.2.0",
     "tsx": "^4.20.5",
